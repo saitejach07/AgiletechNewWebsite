@@ -13,7 +13,7 @@ import { InternalLogin } from './app/pages/InternalLogin';
 import Dashboard from './app/pages/InternalProjects/Dashboard';
 import { ProtectedRoute } from './app/components/ProtectedRoute';
 import Register from './app/pages/InternalProjects/Register';
-import Login from './app/pages/InternalProjects/Login';
+//import Login from './app/pages/InternalProjects/Login';
 import UnderConstruction from './app/pages/InternalProjects/Underconstruction';
 
 export default function App() {

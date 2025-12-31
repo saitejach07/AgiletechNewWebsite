@@ -1,4 +1,4 @@
-import { MapPin, Facebook, Twitter, Linkedin, Instagram } from 'lucide-react';
+import { MapPin} from 'lucide-react';
 import { Link } from 'react-router-dom';
 import logo from '../assets/AgileTech_Logo_5.png';
 
