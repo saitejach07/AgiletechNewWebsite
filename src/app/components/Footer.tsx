@@ -1,4 +1,4 @@
-import { Mail, Phone, MapPin, ArrowUp } from 'lucide-react';
+import { Mail, MapPin, ArrowUp } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import logo from '../assets/AgileTech_Logo_5.png';
 
@@ -91,10 +91,10 @@ export function Footer() {
                   contact@agiletechinc.com
                 </a>
               </li>
-              <li className="flex items-start gap-3 group justify-center sm:justify-start">
+              {/* <li className="flex items-start gap-3 group justify-center sm:justify-start">
                 <Phone className="size-5 mt-1 shrink-0 group-hover:text-[#22D3EE] transition-colors" />
                 <span>+1 (555) 123-4567</span>
-              </li>
+              </li> */}
               <li className="flex items-start gap-3 group justify-center sm:justify-start">
                 <MapPin className="size-5 mt-1 shrink-0 group-hover:text-[#22D3EE] transition-colors" />
                 <span>USA, India</span>

@@ -1,12 +1,7 @@
 import {
   Mail,
   MapPin,
-  Phone,
   Send,
-  Facebook,
-  Twitter,
-  Linkedin,
-  Instagram,
   Check,
   Sparkles,
 } from 'lucide-react';
@@ -189,7 +184,7 @@ export function ContactSection() {
               </h3>
 
               {/* Social Media */}
-              <div className="flex gap-4 mb-8">
+              {/* <div className="flex gap-4 mb-8">
                 <a className="bg-[#3b5998] p-3 rounded-full">
                   <Facebook className="size-5 text-white" />
                 </a>
@@ -202,7 +197,7 @@ export function ContactSection() {
                 <a className="bg-gradient-to-r from-[#833ab4] via-[#fd1d1d] to-[#fcb045] p-3 rounded-full">
                   <Instagram className="size-5 text-white" />
                 </a>
-              </div>
+              </div> */}
 
               {/* CONTACT DETAILS */}
               <div className="space-y-6">
@@ -214,7 +209,8 @@ export function ContactSection() {
                     <h4 className="text-lg text-white mb-1">
                       Our Office Location
                     </h4>
-                    <p className="text-gray-300">MN USA</p>
+                    <p className="text-gray-300">732 Lake Ridge Dr Woodbury</p>
+                    <p className="text-gray-300">MN-55129, USA</p>
                   </div>
                 </div>
 
@@ -235,7 +231,7 @@ export function ContactSection() {
                   </div>
                 </div>
 
-                <div className="flex items-start gap-4 group">
+                {/* <div className="flex items-start gap-4 group">
                   <div className="bg-[#22D3EE] p-3 rounded-lg group-hover:scale-110 transition-transform duration-300">
                     <Phone className="size-6 text-white" />
                   </div>
@@ -247,7 +243,7 @@ export function ContactSection() {
                       +1 (555) 123-4567
                     </p>
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
 
@@ -265,45 +261,3 @@ export function ContactSection() {
     </div>
   );
 }
-
-
-
-
-            //   {/* Contact Details */}
-            //   <div className="space-y-6">
-            //     <div className="flex items-start gap-4 group">
-            //       <div className="bg-[#22D3EE] p-3 rounded-lg group-hover:scale-110 transition-transform duration-300">
-            //         <MapPin className="size-6 text-white" />
-            //       </div>
-            //       <div>
-            //         <h4 className="text-lg text-white mb-1">Our Office Location</h4>
-            //         <p className="text-gray-300">MN USA</p>
-            //       </div>
-            //     </div>
-
-            //     <div className="flex items-start gap-4 group">
-            //       <div className="bg-[#22D3EE] p-3 rounded-lg group-hover:scale-110 transition-transform duration-300">
-            //         <Mail className="size-6 text-white" />
-            //       </div>
-            //       <div>
-            //         <h4 className="text-lg text-white mb-1">Email Address</h4>
-            //         <a
-            //           href="mailto:contact@agiletechinc.com"
-            //           className="text-gray-300 hover:text-[#22D3EE] transition-colors"
-            //         >
-            //           contact@agiletechinc.com
-            //         </a>
-            //       </div>
-            //     </div>
-
-            //     <div className="flex items-start gap-4 group">
-            //       <div className="bg-[#22D3EE] p-3 rounded-lg group-hover:scale-110 transition-transform duration-300">
-            //         <Phone className="size-6 text-white" />
-            //       </div>
-            //       <div>
-            //         <h4 className="text-lg text-white mb-1">Phone Number</h4>
-            //         <p className="text-gray-300">+1 (555) 123-4567</p>
-            //       </div>
-            //     </div>
-            //   </div>
-            // </div>
