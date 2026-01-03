@@ -1,6 +1,6 @@
 import { MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
-import logo from "../assets/AgileTech_Logo_5.png";
+import logo from "../assets/Final_AgileTech_Logo2.png";
 
 export function Header() {
   return (

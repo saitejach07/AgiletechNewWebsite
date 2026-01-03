@@ -209,9 +209,18 @@ export function ContactSection() {
                     <h4 className="text-lg text-white mb-1">
                       Our Office Location
                     </h4>
-                    <p className="text-gray-300">732 Lake Ridge Dr Woodbury</p>
-                    <p className="text-gray-300">MN-55129, USA</p>
+
+                    <a
+                      href="https://www.google.com/maps/search/?api=1&query=8385+Brumby+Trl+Woodbury+MN+55129+USA"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-gray-300 hover:text-[#22D3EE] transition-colors block"
+                    >
+                      8385 Brumby Trl<br />
+                      Woodbury, MN 55129, USA
+                    </a>
                   </div>
+
                 </div>
 
                 <div className="flex items-start gap-4 group">
@@ -248,13 +257,16 @@ export function ContactSection() {
             </div>
 
             {/* MAP PLACEHOLDER */}
-            <div className="bg-[#1E293B] h-64 rounded-2xl flex items-center justify-center border border-white/10">
-              <div className="text-center text-white">
-                <MapPin className="size-16 mx-auto mb-4 opacity-80" />
-                <p className="text-xl">Map Location</p>
-                <p className="text-sm opacity-80 mt-2">Minnesota, USA</p>
+            {/* GOOGLE MAP */}
+              <div className="bg-[#1E293B] rounded-2xl overflow-hidden border border-white/10 shadow-xl">
+                <iframe
+                  title="Agile Technologies Office Location"
+                  src="https://www.google.com/maps?q=8385+Brumby+Trl+Woodbury+MN+55129+USA&output=embed"
+                  className="w-full h-64 md:h-72"
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                />
               </div>
-            </div>
           </div>
         </div>
       </div>
