@@ -10,11 +10,12 @@ import { CustomBuildinSolutions } from './app/pages/CustomBuildinSolutions';
 import { AboutUs } from './app/pages/AboutUs';
 import { Careers } from './app/pages/Careers';
 import { InternalLogin } from './app/pages/InternalLogin';
-import Dashboard from './app/pages/InternalProjects/Dashboard';
+import Providerenrollment from './app/pages/InternalProjects/Providerenrollment';
 import { ProtectedRoute } from './app/components/ProtectedRoute';
 import Register from './app/pages/InternalProjects/Register';
-//import Login from './app/pages/InternalProjects/Login';
+import Login from './app/pages/InternalProjects/Login';
 import UnderConstruction from './app/pages/InternalProjects/Underconstruction';
+import NewDashboard from './app/pages/InternalProjects/NewDashboard';
 
 export default function App() {
   return (
@@ -31,10 +32,11 @@ export default function App() {
           <Route path="services/cloud-solutions" element={<CloudSolutions />} />
           <Route path="services/in-house-projects" element={<CustomBuildinSolutions />}/>
           <Route path="services/in-house-projects/login" element={<InternalLogin />} />
-          <Route path="services/in-house-projects/dashboard" element={  <ProtectedRoute><Dashboard /></ProtectedRoute>} />
-          <Route path="services/in-house-projects/dashboard/register" element={<Register />} />
-          {/* <Route path="services/in-house-projects/dashboard/login" element={<Login />} /> */}
-          <Route path="services/in-house-projects/dashboard/underconstrunction" element={<UnderConstruction />} />
+          <Route path="services/in-house-projects/dashboard" element={<ProtectedRoute><NewDashboard/></ProtectedRoute>}/>
+          <Route path="services/in-house-projects/providerenrollment" element={ <Providerenrollment />} />
+          <Route path="services/in-house-projects/providerenrollment/register" element={<Register />} />
+          <Route path="services/in-house-projects/providerenrollment/login" element={<Login />} /> 
+          <Route path="services/in-house-projects/providerenrollment/underconstrunction" element={<UnderConstruction />} />
         </Route>
       </Routes>
     </BrowserRouter>

@@ -205,21 +205,21 @@ export function ContactSection() {
                   <div className="bg-[#22D3EE] p-3 rounded-lg group-hover:scale-110 transition-transform duration-300">
                     <MapPin className="size-6 text-white" />
                   </div>
-                  <div>
-                    <h4 className="text-lg text-white mb-1">
-                      Our Office Location
-                    </h4>
+              <div>
+                <h4 className="text-lg text-white mb-1">
+                  Our Office Location
+                </h4>
 
-                    <a
-                      href="https://www.google.com/maps/search/?api=1&query=8385+Brumby+Trl+Woodbury+MN+55129+USA"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-gray-300 hover:text-[#22D3EE] transition-colors block"
-                    >
-                      8385 Brumby Trl<br />
-                      Woodbury, MN 55129, USA
-                    </a>
-                  </div>
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=2042+Wooddale+Dr+250+3324+Woodbury+MN+55125"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-300 hover:text-[#22D3EE] transition-colors block"
+                >
+                  2042 Wooddale Dr 250 3324<br />
+                  Woodbury, MN 55125, USA
+                </a>
+              </div>
 
                 </div>
 
@@ -258,15 +258,15 @@ export function ContactSection() {
 
             {/* MAP PLACEHOLDER */}
             {/* GOOGLE MAP */}
-              <div className="bg-[#1E293B] rounded-2xl overflow-hidden border border-white/10 shadow-xl">
-                <iframe
-                  title="Agile Technologies Office Location"
-                  src="https://www.google.com/maps?q=8385+Brumby+Trl+Woodbury+MN+55129+USA&output=embed"
-                  className="w-full h-64 md:h-72"
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                />
-              </div>
+            <div className="bg-[#1E293B] rounded-2xl overflow-hidden border border-white/10 shadow-xl">
+              <iframe
+                title="Agile Technologies Office Location"
+                src="https://www.google.com/maps?q=2042+Wooddale+Dr+250+3324+Woodbury+MN+55125&output=embed"
+                className="w-full h-64 md:h-72"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
+            </div>
           </div>
         </div>
       </div>

@@ -28,7 +28,7 @@ export default function UnderConstruction() {
         {/* Actions */}
         <div className="flex justify-center">
           <Link
-            to="/services/in-house-projects/dashboard"
+            to="/services/in-house-projects/providerenrollment"
             className="inline-flex items-center gap-2 px-6 py-3 rounded-xl
                        bg-gradient-to-r from-cyan-400 to-indigo-500
                        text-[#0F172A] font-semibold
