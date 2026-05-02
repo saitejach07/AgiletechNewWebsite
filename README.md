@@ -212,9 +212,6 @@ http://localhost:5173
 
 ---
 
-# 👨‍💻 Author
-
-AgileTech Project
 # AgileTech Inc – Digital Platform
 
 AgileTech Inc is a modern technology consulting and engineering company platform designed to showcase our services, delivery approach, and internal engineering capabilities. The application reflects how AgileTech partners with businesses to deliver scalable, secure, and high-quality digital solutions.
