@@ -5,7 +5,7 @@ type ProtectedRouteProps = {
 };
 
 export function ProtectedRoute({ children }: ProtectedRouteProps) {
-  const isAuth = localStorage.getItem('auth') === 'true';
+  const isAuth = sessionStorage.getItem('auth') === 'true';
 
   if (!isAuth) {
     return (

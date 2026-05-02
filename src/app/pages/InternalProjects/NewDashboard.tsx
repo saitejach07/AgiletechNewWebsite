@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Search, FileText, HelpCircle } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function NewDashboard() {
   const [firstName, setFirstName] = useState("");
@@ -8,6 +8,13 @@ export default function NewDashboard() {
   const [results, setResults] = useState<any[]>([]);
   const [loading, setLoading] = useState(false);
   const [searched, setSearched] = useState(false);
+
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    sessionStorage.removeItem("auth");
+    navigate("/services/in-house-projects/login");
+  };
 
   const handleSearch = async () => {
     if (!firstName && !lastName) return;
@@ -35,8 +42,8 @@ export default function NewDashboard() {
 
       // ✅ PRODUCTION (cPanel)
       const res = await fetch(`/npi.php?${params.toString()}`);
-
       const data = await res.json();
+
       setResults(Array.isArray(data.results) ? data.results : []);
     } catch (err) {
       console.error("Error:", err);
@@ -71,7 +78,6 @@ export default function NewDashboard() {
       url: "https://npiregistry.cms.hhs.gov/search",
       icon: <Search className="size-6 text-white" />,
     },
-
   ];
 
   return (
@@ -86,6 +92,20 @@ export default function NewDashboard() {
         <div className="absolute inset-0 bg-gradient-to-r from-[#0F172A]/80 via-[#1E293B]/70 to-[#A855F7]/60" />
 
         <div className="relative z-10 h-full flex items-center justify-center text-center">
+          
+          {/* ✅ Logout Button */}
+          <div className="absolute top-6 right-6">
+            <button
+              onClick={handleLogout}
+              className="px-4 py-2 rounded-lg 
+                        bg-gradient-to-r from-[#22D3EE] to-[#6366F1] 
+                        text-white text-sm 
+                        hover:opacity-90 transition"
+            >
+              Logout
+            </button>
+          </div>
+
           <div>
             <h1 className="text-white text-5xl mb-4">Internal Access</h1>
             <p className="text-white/80 text-xl">
@@ -216,5 +236,3 @@ export default function NewDashboard() {
     </div>
   );
 }
-
-

@@ -9,7 +9,7 @@ export function InternalLogin() {
   const [error, setError] = useState('');
 
   useEffect(() => {
-    if (localStorage.getItem('auth') === 'true') {
+    if (sessionStorage.getItem('auth') === 'true') {
       navigate('/services/in-house-projects/dashboard', { replace: true });
     }
   }, [navigate]);
@@ -19,7 +19,7 @@ export function InternalLogin() {
     const adminPassword = import.meta.env.VITE_ADMIN_PASSWORD;
 
     if (email === adminEmail && password === adminPassword) {
-      localStorage.setItem('auth', 'true');
+      sessionStorage.setItem('auth', 'true');
       navigate('/services/in-house-projects/dashboard', { replace: true });
     } else {
       setError('Invalid credentials');
