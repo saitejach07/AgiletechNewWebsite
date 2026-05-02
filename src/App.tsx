@@ -16,6 +16,8 @@ import Register from './app/pages/InternalProjects/Register';
 import Login from './app/pages/InternalProjects/Login';
 import UnderConstruction from './app/pages/InternalProjects/Underconstruction';
 import NewDashboard from './app/pages/InternalProjects/NewDashboard';
+import Profile from './app/pages/InternalProjects/Profile';
+import { ProtectedRouteBackend } from './app/components/ProtectedRouteBackend';
 
 export default function App() {
   return (
@@ -36,6 +38,7 @@ export default function App() {
           <Route path="services/in-house-projects/providerenrollment" element={ <Providerenrollment />} />
           <Route path="services/in-house-projects/providerenrollment/register" element={<Register />} />
           <Route path="services/in-house-projects/providerenrollment/login" element={<Login />} /> 
+          <Route path="services/in-house-projects/providerenrollment/profile" element={<ProtectedRouteBackend><Profile/></ProtectedRouteBackend>}/>
           <Route path="services/in-house-projects/providerenrollment/underconstrunction" element={<UnderConstruction />} />
         </Route>
       </Routes>

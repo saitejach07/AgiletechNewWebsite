@@ -19,22 +19,48 @@ export default function AccountSecurity({
   const [showConfetti, setShowConfetti] = useState(false);
   const [countdown, setCountdown] = useState<number | null>(null);
 
-  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
+const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+  e.preventDefault();
 
-    if (formData.password !== formData.confirmPassword) {
-      alert("Passwords do not match");
-      return;
+  if (formData.password !== formData.confirmPassword) {
+    alert("Passwords do not match");
+    return;
+  }
+
+  try {
+    // remove confirmPassword before sending
+    const { confirmPassword, ...payload } = formData;
+
+    const res = await fetch("http://localhost:5050/api/auth/register", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(payload),
+    });
+
+    const data = await res.json();
+
+    if (!res.ok) {
+      throw new Error(data?.error || "Registration failed");
     }
 
+    console.log("✅ Registered:", data);
+
+    // keep your UI EXACTLY SAME
     setShowConfetti(true);
     setTimeout(() => setCountdown(3), 1500);
-  };
+
+  } catch (err: any) {
+    console.error("❌ Registration error:", err);
+    alert(err.message || "Registration failed");
+  }
+};
 
   useEffect(() => {
     if (countdown === null) return;
     if (countdown === 0) {
-      navigate("/services/in-house-projects/dashboard");
+      navigate("/services/in-house-projects/providerenrollment");
       return;
     }
     const timer = setTimeout(() => setCountdown((c) => c! - 1), 1000);

@@ -7,7 +7,14 @@ type ProtectedRouteProps = {
 export function ProtectedRoute({ children }: ProtectedRouteProps) {
   const isAuth = localStorage.getItem('auth') === 'true';
 
-  return isAuth
-    ? children
-    : <Navigate to="/services/in-house-projects/login" replace />;
+  if (!isAuth) {
+    return (
+      <Navigate
+        to="/services/in-house-projects/login"
+        replace
+      />
+    );
+  }
+
+  return <>{children}</>;
 }
