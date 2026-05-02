@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 🚀 AgileTech Full Stack Application
 
 This project includes:
@@ -82,6 +83,42 @@ CREATE DATABASE provider_db;
 ## 4. Create table
 
 ```sql
+=======
+🚀 AgileTech Full Stack Application
+
+This project includes:
+
+Frontend → React (Vite)
+Backend → Node.js + Express
+Database → PostgreSQL
+📦 Project Structure
+project/
+  frontend/
+  server/
+🧰 Prerequisites
+
+Make sure you have installed:
+
+Node.js (v18+ recommended)
+PostgreSQL (local installation)
+⚙️ Step 1 — Clone the repository
+git clone https://github.com/saitejach07/AgiletechNewWebsite.git
+📥 Step 2 — Install dependencies
+Backend
+cd server
+npm install
+Frontend
+cd ../frontend
+npm install
+🗄️ Step 3 — Setup PostgreSQL Database
+1. Open PostgreSQL
+psql
+2. Create database
+CREATE DATABASE provider_db;
+3. Connect to database
+\c provider_db
+4. Create table
+>>>>>>> dfa0f7d (ReadME updated)
 CREATE TABLE providers (
   id SERIAL PRIMARY KEY,
   first_name VARCHAR(100),
@@ -98,6 +135,7 @@ CREATE TABLE providers (
   password TEXT NOT NULL,
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
+<<<<<<< HEAD
 ```
 
 ---
@@ -129,11 +167,31 @@ Run:
 ```bash
 whoami
 ```
+=======
+🔗 Step 4 — Setup Environment Variables
+📍 Backend .env (inside /server)
+
+Create a file:
+
+server/.env
+
+Add:
+
+PORT=5050
+DATABASE_URL=postgresql://YOUR_USERNAME@localhost:5432/provider_db
+JWT_SECRET=your_secret_key
+🧠 How to find YOUR_USERNAME
+
+Run:
+
+whoami
+>>>>>>> dfa0f7d (ReadME updated)
 
 👉 Use that as your PostgreSQL username
 
 Example:
 
+<<<<<<< HEAD
 ```env
 DATABASE_URL=postgresql://john@localhost:5432/provider_db
 ```
@@ -212,6 +270,35 @@ http://localhost:5173
 
 ---
 
+=======
+DATABASE_URL=postgresql://john@localhost:5432/provider_db
+📍 Frontend .env (inside /frontend)
+frontend/.env
+
+Add:
+
+VITE_API_URL=http://localhost:5050
+▶️ Step 5 — Run the application
+Start backend
+cd server
+npm run dev
+Start frontend (new terminal)
+cd frontend
+npm run dev
+🌐 Step 6 — Open app
+http://localhost:5173
+🔐 Notes
+.env files are NOT included in the repo (for security)
+Make sure PostgreSQL is running locally
+Backend must be running before frontend
+🚨 Common Issues
+❌ Cannot connect to DB
+Ensure PostgreSQL is running
+Check DATABASE_URL is correct
+❌ Login not working
+Ensure backend is running on correct port
+Check API URL in frontend .env
+>>>>>>> dfa0f7d (ReadME updated)
 # AgileTech Inc – Digital Platform
 
 AgileTech Inc is a modern technology consulting and engineering company platform designed to showcase our services, delivery approach, and internal engineering capabilities. The application reflects how AgileTech partners with businesses to deliver scalable, secure, and high-quality digital solutions.
