@@ -1,3 +1,220 @@
+# 🚀 AgileTech Full Stack Application
+
+This project includes:
+
+* **Frontend** → React (Vite)
+* **Backend** → Node.js + Express
+* **Database** → PostgreSQL
+
+---
+
+# 📦 Project Structure
+
+```
+project/
+  frontend/
+  server/
+```
+
+---
+
+# 🧰 Prerequisites
+
+Make sure you have installed:
+
+* Node.js (v18+ recommended)
+* PostgreSQL (local installation)
+
+---
+
+# ⚙️ Step 1 — Clone the repository
+
+```bash
+git clone https://github.com/saitejach07/AgiletechNewWebsite.git
+```
+
+---
+
+# 📥 Step 2 — Install dependencies
+
+### Backend
+
+```bash
+cd server
+npm install
+```
+
+### Frontend
+
+```bash
+cd ../frontend
+npm install
+```
+
+---
+
+# 🗄️ Step 3 — Setup PostgreSQL Database
+
+## 1. Open PostgreSQL
+
+```bash
+psql
+```
+
+---
+
+## 2. Create database
+
+```sql
+CREATE DATABASE provider_db;
+```
+
+---
+
+## 3. Connect to database
+
+```sql
+\c provider_db
+```
+
+---
+
+## 4. Create table
+
+```sql
+CREATE TABLE providers (
+  id SERIAL PRIMARY KEY,
+  first_name VARCHAR(100),
+  last_name VARCHAR(100),
+  dob DATE,
+  gender VARCHAR(10),
+  email VARCHAR(255) UNIQUE NOT NULL,
+  phone VARCHAR(20),
+  profession VARCHAR(100),
+  license_number VARCHAR(100),
+  issuing_authority VARCHAR(255),
+  expiration_date DATE,
+  npi VARCHAR(20),
+  password TEXT NOT NULL,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+```
+
+---
+
+# 🔗 Step 4 — Setup Environment Variables
+
+## 📍 Backend `.env` (inside `/server`)
+
+Create a file:
+
+```bash
+server/.env
+```
+
+Add:
+
+```env
+PORT=5050
+DATABASE_URL=postgresql://YOUR_USERNAME@localhost:5432/provider_db
+JWT_SECRET=your_secret_key
+```
+
+---
+
+## 🧠 How to find YOUR_USERNAME
+
+Run:
+
+```bash
+whoami
+```
+
+👉 Use that as your PostgreSQL username
+
+Example:
+
+```env
+DATABASE_URL=postgresql://john@localhost:5432/provider_db
+```
+
+---
+
+## 📍 Frontend `.env` (inside `/frontend`)
+
+```bash
+frontend/.env
+```
+
+Add:
+
+```env
+VITE_API_URL=http://localhost:5050
+```
+
+---
+
+# ▶️ Step 5 — Run the application
+
+## Start backend
+
+```bash
+cd server
+npm run dev
+```
+
+---
+
+## Start frontend (new terminal)
+
+```bash
+cd frontend
+npm run dev
+```
+
+---
+
+# 🌐 Step 6 — Open app
+
+```
+http://localhost:5173
+```
+
+---
+
+# 🔐 Notes
+
+* `.env` files are NOT included in the repo (for security)
+* Make sure PostgreSQL is running locally
+* Backend must be running before frontend
+
+---
+
+# 🚨 Common Issues
+
+## ❌ Cannot connect to DB
+
+* Ensure PostgreSQL is running
+* Check DATABASE_URL is correct
+
+## ❌ Login not working
+
+* Ensure backend is running on correct port
+* Check API URL in frontend `.env`
+
+---
+
+# 🚀 Production
+
+* Backend → Render / AWS
+* Frontend → Vercel / AWS S3
+* Database → Neon / AWS RDS
+
+---
+
+# 👨‍💻 Author
+
+AgileTech Project
 # AgileTech Inc – Digital Platform
 
 AgileTech Inc is a modern technology consulting and engineering company platform designed to showcase our services, delivery approach, and internal engineering capabilities. The application reflects how AgileTech partners with businesses to deliver scalable, secure, and high-quality digital solutions.
