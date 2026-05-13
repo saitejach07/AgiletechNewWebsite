@@ -35,9 +35,9 @@ export default function App() {
           <Route path="services/in-house-projects" element={<CustomBuildinSolutions />}/>
           <Route path="services/in-house-projects/login" element={<InternalLogin />} />
           <Route path="services/in-house-projects/dashboard" element={<ProtectedRoute><NewDashboard/></ProtectedRoute>}/>
-          <Route path="services/in-house-projects/providerenrollment" element={ <Providerenrollment />} />
-          <Route path="services/in-house-projects/providerenrollment/register" element={<Register />} />
-          <Route path="services/in-house-projects/providerenrollment/login" element={<Login />} /> 
+          <Route path="services/in-house-projects/providerenrollment" element={ <ProtectedRoute><Providerenrollment /></ProtectedRoute>} />
+          <Route path="services/in-house-projects/providerenrollment/register" element={<ProtectedRoute><Register /></ProtectedRoute>} />
+          <Route path="services/in-house-projects/providerenrollment/login" element={<ProtectedRoute><Login /></ProtectedRoute>} /> 
           <Route path="services/in-house-projects/providerenrollment/profile" element={<ProtectedRouteBackend><Profile/></ProtectedRouteBackend>}/>
           <Route path="services/in-house-projects/providerenrollment/underconstrunction" element={<UnderConstruction />} />
         </Route>

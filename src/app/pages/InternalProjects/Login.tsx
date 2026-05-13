@@ -46,14 +46,18 @@ export default function Login() {
         throw new Error(data?.error || "Login failed");
       }
 
-      // 🔍 Verify token
-      const verifyRes = await fetch(`${API_BASE}/api/auth/profile`, {
-        credentials: "include",
-      });
+      // 🔍 Verify token Local
+      // const verifyRes = await fetch(`${API_BASE}/api/auth/profile`, {
+      //   credentials: "include",
+      // });
 
-      if (!verifyRes.ok) {
-        throw new Error("Token verification failed");
-      }
+      // if (!verifyRes.ok) {
+      //   throw new Error("Token verification failed");
+      // }
+
+      //AWS
+      sessionStorage.setItem("providerAuth", "true");
+      sessionStorage.setItem("providerUser", JSON.stringify(data.user));
 
       // ✅ Redirect to profile
       navigate("/services/in-house-projects/providerenrollment/profile");

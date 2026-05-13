@@ -38,10 +38,13 @@ export default function NewDashboard() {
         params.append("last_name", lastName.trim());
       }
 
-      //const res = await fetch(`/npi/api/?${params.toString()}`);
-
       // ✅ PRODUCTION (cPanel)
-      const res = await fetch(`/npi.php?${params.toString()}`);
+      // const res = await fetch(`/npi.php?${params.toString()}`);
+
+      //AWS
+      const API_BASE = import.meta.env.VITE_API_URL;
+      const res = await fetch(`${API_BASE}/npi/api/?${params.toString()}`);
+      
       const data = await res.json();
 
       setResults(Array.isArray(data.results) ? data.results : []);

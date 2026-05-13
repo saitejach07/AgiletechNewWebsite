@@ -88,8 +88,9 @@ export const loginUser = async (req, res) => {
 
   try {
     // 1️⃣ Find user
+    //SELECT id, email, password, first_name, last_name
     const result = await pool.query(
-      "SELECT id, email, password, first_name, last_name FROM providers WHERE email = $1",
+      "SELECT  id, email, password, first_name, last_name, phone,dob, gender, profession, license_number, issuing_authority, expiration_date, npi FROM providers WHERE email = $1",
       [email]
     );
 
@@ -124,11 +125,25 @@ export const loginUser = async (req, res) => {
 
     return res.json({
       message: "Login successful",
+      // user: {
+      //   id: user.id,
+      //   email: user.email,
+      //   firstName: user.first_name,
+      //   lastName: user.last_name,
+      // },
       user: {
         id: user.id,
         email: user.email,
         firstName: user.first_name,
         lastName: user.last_name,
+        phone: user.phone,
+        dob: user.dob,
+        gender: user.gender,
+        profession: user.profession,
+        license_number: user.license_number,
+        issuing_authority: user.issuing_authority,
+        expiration_date: user.expiration_date,
+        npi: user.npi,
       },
     });
 
