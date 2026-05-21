@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # 🚀 AgileTech Full Stack Application
 
 This project includes:
